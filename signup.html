@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>Sign Up</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+$(function () {
+$('#btnSignUp').click(function(){
+var oUserInfo = {
+"userId": $('#txtUser').val()
+};
+sessionStorage.setItem('userInfo', JSON.stringify(oUserInfo));
+window.location.replace("http://localhost:5050/chat");
+});
+});
+</script>
+</head>
+<body>
+<form>
+<h2>Chat</h2>
+<label for="">User name</label>
+<input type="text" id="txtUser" name="txt" required>
+<button type="button" id="btnSignUp">Sign up</button>
+</form>
+</body>
+</html>
